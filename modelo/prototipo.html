@@ -3,20 +3,64 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Vista turística - Estilo Airbnb + Trivago</title>
+  <title>Vista Turística - Estilo Airbnb + Trivago</title>
+
+  <!-- Estilos -->
   <link rel="stylesheet" href="estilos.css" />
+
+  <!-- Iconos Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
+  <!-- ===========================
+       ENCABEZADO PRINCIPAL
+  ============================ -->
+  <header class="header">
+    <div class="header-top">
+      <div class="container">
+        <div class="contact-info">
+          <span><i class="fas fa-phone"></i> +57 300 123 4567</span>
+          <span><i class="fas fa-envelope"></i> info@oceansystem.com</span>
+        </div>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="header-main">
+      <div class="container">
+        <div class="logo">
+          <i class="fas fa-compass"></i> OCEAN
+        </div>
+        <div class="search-container">
+          <i class="fas fa-search search-icon"></i>
+          <input type="text" id="search" class="search-input" placeholder="Buscar destinos, tours, hospedajes...">
+        </div>
+        <nav class="main-nav">
+          <a href="#"><i class="fas fa-home"></i> Inicio</a>
+          <a href="#"><i class="fas fa-map"></i> Explorar</a>
+          <a href="#"><i class="fas fa-bookmark"></i> Mis Reservas</a>
+          <a href="#"><i class="fas fa-tags"></i> Ofertas</a>
+          <a href="#"><i class="fas fa-question-circle"></i> Ayuda</a>
+          <a href="login.html" class="btn-login"><i class="fas fa-user"></i> Iniciar Sesión</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===========================
+       CONTENIDO PRINCIPAL
+  ============================ -->
   <div class="container">
     <div class="grid">
-      
-      <!-- ==========================================
-           CONTENIDO PRINCIPAL
-           ========================================== -->
       <main>
         <!-- GALERÍA -->
-        <div class="gallery">
+        <section class="gallery">
           <div class="hero">
             <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1400&q=80" 
                  alt="Playa tropical" class="hero-img" />
@@ -41,18 +85,18 @@
               <span>Selvas</span>
             </div>
           </div>
-        </div>
+        </section>
 
         <!-- INFORMACIÓN -->
-        <div class="title-row">
-          <div>
-            <div class="title">Cabaña tropical en Cartagena</div>
-            <div class="meta">Hasta 4 huéspedes · 2 habitaciones · 3 camas · Cerca de la playa</div>
+        <section class="info-section">
+          <div class="title-row">
+            <div>
+              <h2 class="title">Cabaña tropical en Cartagena</h2>
+              <div class="meta">Hasta 4 huéspedes · 2 habitaciones · 3 camas · Cerca de la playa</div>
+            </div>
+            <div class="rating">⭐ <strong>4.9</strong> · 320 reseñas</div>
           </div>
-          <div class="rating">⭐ <strong>4.9</strong> · 320 reseñas</div>
-        </div>
 
-        <div class="details">
           <!-- ANFITRIÓN -->
           <div class="host">
             <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?auto=format&fit=crop&w=200&q=60" 
@@ -75,12 +119,12 @@
             <button id="expandDesc" class="link-btn">Mostrar más</button>
             <div id="extraDesc" class="hidden">
               <p>
-                Incluye recomendaciones de viajeros, comparativa de precios y sugerencias para optimizar tu estadía. Disfruta de un entorno relajante con las mejores vistas y actividades locales.
+                Incluye comparativa de precios, sugerencias de viajeros y recomendaciones locales. Vive el encanto del Caribe con tranquilidad y estilo.
               </p>
             </div>
           </div>
 
-          <!-- SERVICIOS TURÍSTICOS -->
+          <!-- TOURS -->
           <div class="section">
             <h3>Servicios turísticos y tours adicionales</h3>
             <div class="tours-grid">
@@ -117,7 +161,7 @@
           <div class="section">
             <h3>Ubicación</h3>
             <p>
-              En el barrio Bocagrande — cerca de las principales playas, restaurantes y puntos turísticos. Perfecta para explorar el centro histórico y las islas cercanas.
+              En el barrio Bocagrande — cerca de playas, restaurantes y puntos turísticos. Perfecta para explorar el centro histórico y las islas cercanas.
             </p>
             <div class="map-placeholder">
               <img src="https://images.unsplash.com/photo-1528909514045-2fa4ac7a08ba?auto=format&fit=crop&w=1200&q=80" alt="Mapa turístico" />
@@ -170,12 +214,10 @@
               </div>
             </div>
           </section>
-        </div>
+        </section>
       </main>
 
-      <!-- ==========================================
-           SIDEBAR DE RESERVA
-           ========================================== -->
+      <!-- SIDEBAR -->
       <aside>
         <div class="card">
           <div class="price-section">
@@ -226,9 +268,10 @@
     </div>
   </div>
 
-  <!-- TOAST DE CONFIRMACIÓN -->
+  <!-- TOAST -->
   <div id="toast" class="toast hidden"></div>
 
+  <!-- Script principal -->
   <script src="funcionalidades.js"></script>
 </body>
 </html>
